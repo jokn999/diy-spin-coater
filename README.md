@@ -1,11 +1,22 @@
 # DIY Spin Coater
 
-## Project overview — complete this section
+## Project overview
 
-<!-- Describe what the project does, the problem it addresses, and the relevant background or motivation. -->
+This project presents the development of a low-cost, open-source spin coater specifically designed for coating three-dimensional optical elements, particularly additively manufactured lenses. The system combines a high-torque stepper motor, a vibration-dampening base and an ESP32-based standalone control unit to provide precise and repeatable rotational speed profiles.
 
-**What it does:** _[Fill in]_  
-**Background and motivation:** _[Fill in]_
+The firmware enables the operator to configure deposition speed, spinning speed and duration. An initial low-speed deposition phase allows coating resin to be distributed over the optical surface before transitioning to a controlled, timed spinning phase. Up to eight parameter profiles can be stored directly in the ESP32's non-volatile memory.
+
+### Background and motivation
+
+High-resolution masked stereolithography (mSLA) offers an accessible alternative to conventional, expensive optical manufacturing techniques. However, layer-by-layer fabrication introduces surface imperfections (the staircase effect), while oxygen inhibition during UV polymerization can leave partially cured, light-scattering resin on the surface.
+
+To improve optical quality, these imperfections can be addressed by applying a thin, homogeneous layer of the same resin used for printing. This preserves refractive-index continuity at the optical boundary while smoothing the surface. Achieving a uniform coating requires precise and repeatable rotational speed profiles.
+
+Commercial spin coaters are primarily designed for thin, flat silicon wafers. Their limited sample clearance and comparatively low torque make them unsuitable for larger, three-dimensional optical elements.
+
+The objective of this project is therefore to provide an affordable and accessible alternative, combining readily available electronics, 3D-printed components and a vibration-dampening mechanical design. The resulting system was developed and characterized using additively manufactured plano-convex lenses made from Formlabs Clear V5 resin.
+
+This repository contains the ESP32 firmware responsible for motor control, parameter configuration, profile management and the user interface. The associated project report documents the mechanical design, electronics, assembly and optical characterization.
 
 ## Features
 
